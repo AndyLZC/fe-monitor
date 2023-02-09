@@ -30,7 +30,7 @@ const plugins = [
 ]
 
 export default {
-  input: './src/B.ts',
+  input: './src/index.ts',
   output:  {
     file: 'dist/index.iife.js',
     format: 'iife',

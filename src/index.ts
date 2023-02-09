@@ -1,1 +1,3 @@
-const foo = 'hello fe-monitor'
+import firstScreenPaint from './performance/fsp'
+
+export default firstScreenPaint
