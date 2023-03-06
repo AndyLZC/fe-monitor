@@ -1,22 +1,19 @@
-// largest-content-paint 最大内容绘制
+// first-input-delay 首次输入延迟
 
 import { report } from '../utils/report'
 import { MonitorType, PerformanceType } from '../types'
 
-export function getLCP() {
+export function getFID() {
   const observer = new PerformanceObserver((entryList) => {
     for (const entry of entryList.getEntries()) {
+      const e = entry as PerformanceEventTiming
       observer.disconnect()
       report({
         type: MonitorType.Performance,
-        subType: PerformanceType.LargestContentfulPaint,
-        startTime: entry.startTime
+        subType: PerformanceType.FirstInputDelay,
+        startTime: +(e.processingStart - e.startTime).toFixed(1)
       })
     }
   })
-
-  observer.observe({
-    type: 'largest-contentful-paint',
-    buffered: true
-  })
+  observer.observe({ type: 'first-input', buffered: true })
 }

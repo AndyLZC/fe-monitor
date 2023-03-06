@@ -1,16 +1,36 @@
 {
+  "name": "web-monitor",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "前端监控sdk",
+  "author": "",
+  "license": "ISC",
+  "main": "rollup.config.js",
   "scripts": {
     "dev": "rollup -c",
-    "build": "rollup -wc"
-  },
-  "type": "module",
-  "devDependencies": {
-    "esbuild": "^0.17.5",
-    "rollup": "^3.12.1",
-    "rollup-plugin-esbuild": "^5.0.0"
+    "build": "yarn lint && rollup -wc",
+    "lint": "eslint --fix src/"
   },
   "dependencies": {
+    "error-stack-parser": "^2.1.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.35.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "web-vitals": "^3.1.1"
+    "@types/uuid": "^9.0.1",
+    "@typescript-eslint/parser": "^5.54.0",
+    "esbuild": "^0.17.5",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "rollup": "^3.12.1",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "typescript": "^4.9.5"
+  },
+  "directories": {
+    "example": "example"
   }
 }

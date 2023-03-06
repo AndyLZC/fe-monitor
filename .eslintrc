@@ -1,0 +1,17 @@
+{
+  "extends": ["@antfu", "plugin:prettier/recommended"],
+  "rules": {
+    "no-tabs": 0,
+    "no-console": "off",
+    "no-const-assign": "error", // 不能修改常量
+    "no-duplicate-case": "error", // switch中的case标签不能重复
+    "multiline-ternary": "off",
+    "no-plusplus": "error", // 禁止使用++ --
+    "no-redeclare": "error", // 禁止重复声明变量
+    "no-self-assign": "off",
+    "curly": [2, "all"], //必须使用 if(){} 中的{}
+    "eqeqeq": 2, //必须使用全等
+    "default-case": 2, //switch语句最后必须有default
+    "no-var": "error" // 禁止用var
+  }
+}
